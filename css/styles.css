@@ -1,0 +1,144 @@
+:root {
+  --warning: #f0c711;
+  --danger: #af160c;
+}
+
+/* Polices */
+body {
+  font-family: "Oswald";
+}
+h1 {
+  font-size: 5rem;
+}
+/* alignments & sizing*/
+.services-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.services-card {
+  max-width: 350px;
+  height: 580px;
+}
+
+.services-card .card-text {
+  height: 200px;
+}
+
+.cta-container {
+  margin-top: 1.2rem;
+}
+.contact-cta {
+  max-width: 150px;
+}
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+}
+
+/* TRANSITIONS */
+.social-card {
+  transition: all 300ms;
+}
+.social-card * {
+  text-decoration: none;
+}
+
+/* Hover, active... states*/
+.nav-link:hover {
+  background-color: var(--warning);
+  color: black !important;
+}
+.social-card:hover {
+  background: var(--warning);
+  cursor: pointer;
+  color: black !important;
+}
+.social-card:hover * {
+  color: black !important;
+}
+
+.contact-cta:hover {
+  background: #000;
+  color: rgb(255, 255, 255);
+}
+
+/* STYLES */
+.cta {
+  background: var(--warning);
+  text-align: center;
+}
+
+.web-carousel__link {
+  text-decoration: none;
+}
+
+.social-card--link {
+  white-space: normal;
+  word-break: break-word;
+}
+.contact-cta {
+  background: var(--warning);
+  color: rgb(15, 1, 1);
+  transition: all 300ms;
+}
+
+nav .active {
+  background: var(--warning);
+  color: rgb(15, 1, 1) !important;
+}
+
+/* Animate on load */
+
+.intersect-element {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 1s;
+}
+
+.reveal {
+  opacity: 1;
+  transform: translateX(0);
+}
+.social-card.reveal {
+  transition: all 300ms;
+}
+.intersect-element2 {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 1s;
+}
+
+.reveal2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 765px) {
+  .design-carousel .carousel-item img {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media screen and (min-width: 765px) {
+  .social-card {
+    max-width: 50%;
+  }
+  .web-carousel .carousel-item img {
+    max-width: 50%;
+  }
+
+  .social-card--link {
+    white-space: nowrap;
+    word-break: normal;
+  }
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
